@@ -20,7 +20,7 @@ pipeline {
                 sh 'docker pull prabhakanth123/kanth:$BUILD_NUMBER'
                }
                 sh 'docker rm -f jenkin_dock'
-                sh 'docker run -itd -p 8090:8080 --name tom_docker jenkin_dock'
+                sh 'docker run -itd -p 8070:8080 --name tom_docker jenkin_dock'
             }
         }
     }
