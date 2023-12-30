@@ -9,7 +9,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 withDockerRegistry([ credentialsId: "docker-hub-creds", url:""]) {
-                    sh 'docker tag mvn_docker prabhakanth123/kanth:$BUILD_NUMBER'
+                    sh 'docker tag jenkin_dock prabhakanth123/kanth:$BUILD_NUMBER'
                     sh 'docker push prabhakanth123/kanth:$BUILD_NUMBER' 
                 }
             }
